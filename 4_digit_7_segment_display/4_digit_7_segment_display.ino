@@ -1,4 +1,5 @@
 
+// Segments on 4Display > Pins
 int pinA = 2;
 int pinB = 3;
 int pinC = 4;
@@ -7,6 +8,7 @@ int pinE = 6;
 int pinF = 7;
 int pinG = 8;
 
+//Digits on 4Display > Pins
 int D1 = 9;
 int D2 = 10;
 int D3 = 11;
@@ -29,11 +31,39 @@ void setup(){
 
 // loop routine over and over again forever
 void loop(){
-  digitalWrite(D1, HIGH);
-  digitalWrite(D2, LOW);
-  digitalWrite(D3, LOW);
-  digitalWrite(D4, LOW);
-  
+  // Determine which to show - High - On, Low - Off
+  digitalWrite(D1, HIGH); // HOUR
+  digitalWrite(D2, HIGH); // HOUR
+  digitalWrite(D3, HIGH); // MINUTE
+  digitalWrite(D4, HIGH); // MINUTE
+//  digitalWrite(D1, LOW);
+//  digitalWrite(D2, HIGH);
+//  digitalWrite(D3, LOW);
+//  digitalWrite(D4, LOW);
+
+  display0();
+  delay(1000); // wait for a second
+  display1();
+  delay(1000); // wait for a second
+  display2();
+  delay(1000); // wait for a second
+  display3();
+  delay(1000); // wait for a second
+  display4();
+  delay(1000); // wait for a second
+  display5();
+  delay(1000); // wait for a second
+  display6();
+  delay(1000); // wait for a second
+  display7();
+  delay(1000); // wait for a second
+  display8();
+  delay(1000); // wait for a second
+  display9();
+  delay(1000); // wait for a second
+}
+
+void display0(){
   // 0
   digitalWrite(pinA, LOW);
   digitalWrite(pinB, LOW);
@@ -42,13 +72,9 @@ void loop(){
   digitalWrite(pinE, LOW);
   digitalWrite(pinF, LOW);
   digitalWrite(pinG, HIGH);
-  delay(1); // wait for a second
+}
 
-  digitalWrite(D1, LOW);
-  digitalWrite(D2, HIGH);
-  digitalWrite(D3, LOW);
-  digitalWrite(D4, LOW);
-
+void display1(){
   // 1
   digitalWrite(pinA, HIGH);
   digitalWrite(pinB, LOW);
@@ -57,13 +83,9 @@ void loop(){
   digitalWrite(pinE, HIGH);
   digitalWrite(pinF, HIGH);
   digitalWrite(pinG, HIGH);
-  delay(1); // wait for a second
+}
 
-  digitalWrite(D1, LOW);
-  digitalWrite(D2, LOW);
-  digitalWrite(D3, HIGH);
-  digitalWrite(D4, LOW);
-
+void display2(){
   // 2
   digitalWrite(pinA, LOW);
   digitalWrite(pinB, LOW);
@@ -71,14 +93,10 @@ void loop(){
   digitalWrite(pinD, LOW);
   digitalWrite(pinE, LOW);
   digitalWrite(pinF, HIGH);
-  digitalWrite(pinG, LOW);
-  delay(1); // wait for a second
+  digitalWrite(pinG, LOW); 
+}
 
-  digitalWrite(D1, LOW);
-  digitalWrite(D2, LOW);
-  digitalWrite(D3, LOW);
-  digitalWrite(D4, HIGH);
-
+void display3(){
   // 3
   digitalWrite(pinA, LOW);
   digitalWrite(pinB, LOW);
@@ -87,65 +105,71 @@ void loop(){
   digitalWrite(pinE, HIGH);
   digitalWrite(pinF, HIGH);
   digitalWrite(pinG, LOW);
-  delay(1); // wait for a second
-//
-//  // 4
-//  digitalWrite(pinA, HIGH);
-//  digitalWrite(pinB, LOW);
-//  digitalWrite(pinC, LOW);
-//  digitalWrite(pinD, HIGH);
-//  digitalWrite(pinE, HIGH);
-//  digitalWrite(pinF, LOW);
-//  digitalWrite(pinG, LOW);
-//  delay(1000); // wait for a second
-//
-//  // 5
-//  digitalWrite(pinA, LOW);
-//  digitalWrite(pinB, HIGH);
-//  digitalWrite(pinC, LOW);
-//  digitalWrite(pinD, LOW);
-//  digitalWrite(pinE, HIGH);
-//  digitalWrite(pinF, LOW);
-//  digitalWrite(pinG, LOW);
-//  delay(1000); // wait for a second
-//
-//  // 6
-//  digitalWrite(pinA, LOW);
-//  digitalWrite(pinB, HIGH);
-//  digitalWrite(pinC, LOW);
-//  digitalWrite(pinD, LOW);
-//  digitalWrite(pinE, LOW);
-//  digitalWrite(pinF, LOW);
-//  digitalWrite(pinG, LOW);
-//  delay(1000); // wait for a second
-//
-//  // 7
-//  digitalWrite(pinA, LOW);
-//  digitalWrite(pinB, LOW);
-//  digitalWrite(pinC, LOW);
-//  digitalWrite(pinD, HIGH);
-//  digitalWrite(pinE, HIGH);
-//  digitalWrite(pinF, HIGH);
-//  digitalWrite(pinG, HIGH);
-//  delay(1000); // wait for a second
-//
-//  // 8
-//  digitalWrite(pinA, LOW);
-//  digitalWrite(pinB, LOW);
-//  digitalWrite(pinC, LOW);
-//  digitalWrite(pinD, LOW);
-//  digitalWrite(pinE, LOW);
-//  digitalWrite(pinF, LOW);
-//  digitalWrite(pinG, LOW);
-//  delay(1000); // wait for a second
-//
-//  // 9
-//  digitalWrite(pinA, LOW);
-//  digitalWrite(pinB, LOW);
-//  digitalWrite(pinC, LOW);
-//  digitalWrite(pinD, HIGH);
-//  digitalWrite(pinE, HIGH);
-//  digitalWrite(pinF, LOW);
-//  digitalWrite(pinG, LOW);
-//  delay(1000); // wait for a second
+}
+
+void display4(){
+  // 4
+  digitalWrite(pinA, HIGH);
+  digitalWrite(pinB, LOW);
+  digitalWrite(pinC, LOW);
+  digitalWrite(pinD, HIGH);
+  digitalWrite(pinE, HIGH);
+  digitalWrite(pinF, LOW);
+  digitalWrite(pinG, LOW);
+}
+
+void display5(){
+  // 5
+  digitalWrite(pinA, LOW);
+  digitalWrite(pinB, HIGH);
+  digitalWrite(pinC, LOW);
+  digitalWrite(pinD, LOW);
+  digitalWrite(pinE, HIGH);
+  digitalWrite(pinF, LOW);
+  digitalWrite(pinG, LOW);
+}
+
+void display6(){
+  // 6
+  digitalWrite(pinA, LOW);
+  digitalWrite(pinB, HIGH);
+  digitalWrite(pinC, LOW);
+  digitalWrite(pinD, LOW);
+  digitalWrite(pinE, LOW);
+  digitalWrite(pinF, LOW);
+  digitalWrite(pinG, LOW);
+}
+
+void display7(){
+  // 7
+  digitalWrite(pinA, LOW);
+  digitalWrite(pinB, LOW);
+  digitalWrite(pinC, LOW);
+  digitalWrite(pinD, HIGH);
+  digitalWrite(pinE, HIGH);
+  digitalWrite(pinF, HIGH);
+  digitalWrite(pinG, HIGH);
+}
+
+void display8(){
+
+  // 8
+  digitalWrite(pinA, LOW);
+  digitalWrite(pinB, LOW);
+  digitalWrite(pinC, LOW);
+  digitalWrite(pinD, LOW);
+  digitalWrite(pinE, LOW);
+  digitalWrite(pinF, LOW);
+  digitalWrite(pinG, LOW);
+}
+
+void display9(){
+  // 9
+  digitalWrite(pinA, LOW);
+  digitalWrite(pinB, LOW);
+  digitalWrite(pinC, LOW);
+  digitalWrite(pinD, HIGH);
+  digitalWrite(pinE, HIGH);
+  digitalWrite(pinF, LOW);
+  digitalWrite(pinG, LOW);
 }
